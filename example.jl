@@ -24,7 +24,7 @@ fSF = MPIFile(datadirSF)
 bgFrames = 51:55
 
 # Selected frames
-frames = 131  # 51:191
+frames = 131  # change this to e.g. 51:191 to reconstruct a range of frames 
 
 # Bounds for frequency selection
 minFreq = 20e3 # change this to 40e3 to exclude the excitation frequency
@@ -38,7 +38,7 @@ recChannels = 1:1
 iterations = 20
 
 # Parameters for the joint estimation of BG and particle concentration
-beta = 1.0*5.0.^(-8)
+beta = (1/5)^(5)
 dictSize = 10
 
 # Put all parameters into a dictionary
@@ -84,13 +84,11 @@ cBGEst = reconstruction(fSF,f; paramsJoint...).data.data
 vmin = 0.0
 vmax = 0.0006
 
-#figure(2, figsize=(6,2))
-s = (1000,350)
-
 p1 = heatmap(cStaticCorr[1,:,:,1,1], clim=(vmin,vmax), c=:viridis, 
              title="Static", aspect_ratio=1 )
 p2 = heatmap(cDynCorr[1,:,:,1,1], clim=(vmin,vmax), c=:viridis, 
              title="Linear", aspect_ratio=1 )
 p3 = heatmap(cBGEst[1,:,:,1,1], clim=(vmin,vmax), c=:viridis, 
              title="Joint", aspect_ratio=1 )
-plot(p1,p2,p3, layout = (1, 3), size=s)
+
+plot(p1, p2, p3, layout = (1, 3), size=(1000,350))

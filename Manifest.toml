@@ -722,9 +722,9 @@ version = "2021.1.1+1"
 
 [[MPIFiles]]
 deps = ["AxisArrays", "CodecZlib", "Dates", "DelimitedFiles", "FileIO", "Graphics", "HDF5", "Images", "Inflate", "Interpolations", "LazyArtifacts", "LinearAlgebra", "Mmap", "Pkg", "Random", "SHA", "SparsityOperators", "Statistics", "Tar", "Test", "UUIDs", "Unitful"]
-git-tree-sha1 = "5f507169ce0244b8edad62af39dd64aaa10ccfa1"
+git-tree-sha1 = "5e31e1b0ad274141ee5a951543afcf2e67837fa9"
 uuid = "371237a9-e6c1-5201-9adb-3d8cfa78fa9f"
-version = "0.11.9"
+version = "0.11.10"
 
 [[MPIReco]]
 deps = ["DSP", "Distributed", "DistributedArrays", "ImageUtils", "IniFile", "LinearAlgebra", "MPIFiles", "RegularizedLeastSquares", "SparseArrays"]
