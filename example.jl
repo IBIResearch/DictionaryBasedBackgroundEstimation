@@ -1,12 +1,19 @@
+##################################
+# Load Packages and Activate Env #
+##################################
+using Pkg 
+Pkg.activate(".")
+Pkg.instantiate()
+
 using MPIReco, Plots, LazyArtifacts
 
 # Download data
 datadir = artifact"data"
 store = MDFDatasetStore(datadir)
 
-################
-## Parameters ##
-################
+##############
+# Parameters #
+##############
 
 # Dataset store handling
 study = getStudies(store, "BGDrift")[1]
@@ -57,9 +64,9 @@ params = Dict{Symbol,Any}(
   :spectralLeakageCorrection =>false
  )
 
-############################
-## Perform reconstruction ##
-############################
+##########################
+# Perform reconstruction #
+##########################
 
 @info "Reconstruction with static BG correction"
 paramsStatic = deepcopy(params)

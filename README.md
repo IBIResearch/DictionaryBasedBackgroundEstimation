@@ -12,19 +12,10 @@ T. Knopp, M. Grosser, M. Gräser, T. Gerkmann, M. Möddel, Efficient Joint Estim
 
 ## Installation
 
-In order to use this code one first has to download Julia (version 1.6 or later) then clone this repository and navigate to the folder in the command line. Once you are there, startup Julia with
-```julia
-julia --project=.
-```
-which will open Julia with the required packages. Then enter
-Load the package by entering
-```julia
-using Pkg; Pkg.instantiate()
-```
-which will install all required packages.
+In order to use this code one first has to download Julia (version 1.6 or later), clone this repository and navigate to the folder in the command line. The example script automatically activates the environment and install all necessary packages.
 
 ## Execution
-After installation the example code can be executed by entering
+After installation the example code can be executed by running `julia` and entering
 ```julia
 include("example.jl")
 ```
