@@ -1,21 +1,24 @@
-using Pkg, MPIReco
-
-using HTTP, Plots
+using MPIReco, Plots, LazyArtifacts
 
 # Download data
-include("downloadData.jl")
+datadir = artifact"data"
+store = MDFDatasetStore(datadir)
 
 ################
 ## Parameters ##
 ################
 
+# Dataset store handling
+study = getStudies(store, "BGDrift")[1]
+exp = getExperiment(study, 1)
+
 # Measurement data
-datadirMeas = "./data/"
-f = MPIFile(datadirMeas*"meas.mdf")
+filenameMeas = path(exp)
+f = MPIFile(filenameMeas)
 
 # System matrices
-datadirSF = "./data/"
-fSF = MPIFile(datadirSF*"SF.mdf")
+datadirSF = joinpath(calibdir(store), "1.mdf")
+fSF = MPIFile(datadirSF)
 
 # Background frames
 bgFrames = 51:55

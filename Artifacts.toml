@@ -1,0 +1,7 @@
+[data]
+git-tree-sha1 = "4465dd2b0375c4c6f3470b969cc981f52e4db5f9"
+lazy = true
+
+    [[data.download]]
+    sha256 = "958551052fda393596ea9674e84178c6ed92891db2ecb8d4f81a6837eb4103f7"
+    url = "https://zenodo.org/record/4972124/files/data.tar.gz"
