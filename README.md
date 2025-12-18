@@ -7,7 +7,7 @@ matrix acquisition.
 
 The method is described in the associated publication
 
-T. Knopp, M. Grosser, M. Gräser, T. Gerkmann, M. Möddel, Efficient Joint Estimation of Tracer Distribution and Background Signals in Magnetic Particle Imaging using a Dictionary Approach, *IEEE Transactions on Medical Imaging*, 2021  [*arXiv:2101.12624*](https://arxiv.org/abs/2006.05741).
+T. Knopp, M. Grosser, M. Graeser, T. Gerkmann, and M. Möddel (2021). Efficient Joint Estimation of Tracer Distribution and Background Signals in Magnetic Particle Imaging using a Dictionary Approach. *IEEE Transactions on Medical Imaging*, 40(12). doi: [10.1109/TMI.2021.3090928](https://doi.org/10.1109/TMI.2021.3090928), arXiv: [2101.12624](https://arxiv.org/abs/2006.05741).
 
 
 ## Installation
